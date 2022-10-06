@@ -1,16 +1,16 @@
 extends layout
 
 block content
-  h1= title
 
-  form(method='POST' action='')
+  form(method='POST' action='' class='newWeaponForm')
+    h1= title
     div.form-group
       label(for='title') Title:
       input#title.form-control(type='text', placeholder='Name of weapon' name='title' required='true' value=(undefined===weapon ? '' : weapon.name) )
     div.form-group
       label(for='description') Description:
       textarea#description.form-control(type='textarea', placeholder='Description' name='description' required='true') #{undefined===weapon ? '' : weapon.summary}
-    div.form-group
+    div(class = 'form-group checkbox-div')
       label Category:
       div
         for category in categories

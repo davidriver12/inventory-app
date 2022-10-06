@@ -6,7 +6,7 @@ const async = require("async");
 
 exports.index = (req, res) => {
     res.render("index", {
-      title: "Inventory Application Home",
+      title: "Elden Ring Weapon Data Base",
     });
 };
 
@@ -65,7 +65,7 @@ exports.weapon_create_get = (req, res, next) => {
         return next(err);
       }
       res.render("weapon_form", {
-        title: "Create Weapon",
+        title: "Save new Weapon",
         categories: results.categories,
       });
     }
