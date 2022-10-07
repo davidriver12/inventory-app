@@ -7,7 +7,7 @@ const WeaponSchema = new Schema({
   description: { type: String, required: true },
   category: { type: String, required: true },
   price: {type: Number, required: true},
-  number_in_stock: {type: Number, required: true}
+  number_in_stock: {type: Number, required: true},
 });
 
 WeaponSchema.virtual("url").get(function () {
